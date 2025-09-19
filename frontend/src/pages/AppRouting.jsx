@@ -11,9 +11,12 @@ const AppRouting = () => {
 
   const [isAuthenticated,setIsAuthenticated] = useState(false);
 
+  const clientId = process.env.CLIENTID;
+
+
   const GoogleAuthWrapper = () => {
     return (
-      <GoogleOAuthProvider clientId='544473902378-nr1g8ja8dlt107q0qua53ttph888qumv.apps.googleusercontent.com'>
+      <GoogleOAuthProvider clientId={clientId}>
         <GoogleLogin></GoogleLogin>
       </GoogleOAuthProvider>
     )
